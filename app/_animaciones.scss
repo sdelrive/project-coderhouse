@@ -1,0 +1,45 @@
+.faden{
+    visibility: hidden;
+}
+
+@keyframes f-in{
+    from{
+        visibility: hidden;
+        opacity: 0;
+    }
+    1% {
+        visibility: visible;
+        opacity: 0;
+    }
+
+    to{
+        opacity: 1;
+        visibility: visible;
+
+    }
+}
+
+.f-in{
+    animation: f-in 200ms ease-in-out  forwards;
+
+}
+@keyframes f-out{
+    from{
+        visibility: visible;
+        opacity: 1;
+    }
+    99%{
+        visibility: visible;
+        opacity: 0;
+    }
+
+    to{
+        opacity: 0;
+        visibility: hidden;
+    
+    }
+}
+.f-out{
+    animation: f-out 200ms ease-in-out  forwards;
+
+}

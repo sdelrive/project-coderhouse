@@ -1,0 +1,479 @@
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 100%;
+}
+
+*, *::before, *::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Bai Jamjuree', sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.3;
+  width: 100%;
+  height: 800px;
+  background-image: url(/img/fondo1.jpg);
+  margin: 0px;
+  padding: 0px;
+  background-attachment: fixed;
+}
+
+body.no-scroll {
+  overflow: hidden;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.flex-jc-sb {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.flex-ai-c {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+.contain {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+@media screen and (max-width: 599px) {
+  .hide-for-mobile {
+    display: none;
+  }
+  .body {
+    width: 100%;
+    height: 800px;
+    background-image: url(https://es.rollingstone.com/wp-content/uploads/2022/01/Amigos-de-Mac-Miller-celebran-lo-que-seria-su-cumpleanos-numero-30-con-mensajesc.jpg);
+    margin: 0px;
+    padding: 0px;
+    background-attachment: fixed;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .hide-for-desktop {
+    display: none;
+  }
+}
+
+.header {
+  background-color: black;
+  width: 100%;
+  margin-bottom: -20px;
+}
+
+.header nav {
+  padding: 0px 20px 0px 20px;
+}
+
+.header.open .overlay {
+  display: block;
+  -webkit-animation: f-in 300ms ease-in-out  forwards;
+          animation: f-in 300ms ease-in-out  forwards;
+}
+
+.header.open .header__menu > span:first-child {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.header.open .header__menu > span:nth-child(2) {
+  opacity: 0;
+}
+
+.header.open .header__menu > span:last-child {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.header .overlay {
+  position: absolute;
+  top: 70px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(slategray), to(transparent));
+  background-image: linear-gradient(slategray, transparent);
+  -webkit-animation: f-out 300ms ease-in-out  forwards;
+          animation: f-out 300ms ease-in-out  forwards;
+}
+
+.header__menu > span {
+  display: block;
+  width: 26px;
+  height: 2px;
+  background-color: white;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+  -webkit-transform-origin: 2px 1px;
+          transform-origin: 2px 1px;
+}
+
+.header__menu > span:not(:last-child) {
+  margin-bottom: 6px;
+}
+
+.header__menu2 {
+  margin: 10px 1.5rem;
+  padding: 1.625rem;
+  border-radius: 5px;
+  position: absolute;
+  width: 90%;
+  background: black;
+}
+
+.header__menu2 > a {
+  color: white;
+  display: block;
+  text-align: center;
+  padding: 0.625rem;
+  -webkit-transition: 200ms ease-in-out;
+  transition: 200ms ease-in-out;
+}
+
+.header__menu2 > a:hover {
+  color: #54E8C7;
+}
+
+.header__logo {
+  color: white;
+  font-size: 1rem;
+  -webkit-transition: 200ms ease-in-out;
+  transition: 200ms ease-in-out;
+}
+
+.header__logo:hover {
+  color: #54E8C7;
+}
+
+.header__nav li {
+  list-style-type: none;
+  display: inline-block;
+}
+
+.header__nav a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: white;
+  padding: 7px 5px;
+  font-size: .9rem;
+  font-weight: 500;
+  margin-right: 20px;
+  -webkit-transition: 200ms ease-in-out;
+  transition: 200ms ease-in-out;
+}
+
+.header__nav a:hover {
+  color: #54E8C7;
+}
+
+.footer {
+  height: 15rem;
+  background-color: black;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.footer p {
+  color: white;
+  text-align: center;
+  margin-top: 50px;
+  font-size: 80%;
+}
+
+.logos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.logos p {
+  color: #c2c2c2;
+  margin-left: 50px;
+  font-size: 50%;
+}
+
+.logos a {
+  height: 40px;
+  width: 40px;
+  display: inline-block;
+  background-color: #c2c2c2;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: black;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin: 30px 0px 0px 30px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.logos a:hover {
+  background-color: #54E8C7;
+}
+
+.logos a:last-child {
+  margin-right: 50px;
+}
+
+/* LAYOUT */
+.layout {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  margin: 0;
+  -ms-grid-columns: 30% 70%;
+      grid-template-columns: 30% 70%;
+  -ms-grid-rows: auto auto auto;
+      grid-template-rows: auto auto auto;
+      grid-template-areas: "header header" "main aside" "footer footer";
+}
+
+.header-layout {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: header;
+}
+
+.aside-layout {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: aside;
+}
+
+.footer-layout {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: footer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main-layout {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: main;
+}
+
+@media screen and (max-width: 700px) {
+  .layout {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: auto 2fr auto auto;
+        grid-template-rows: auto 2fr auto auto;
+        grid-template-areas: "header " "main" "aside" "footer";
+  }
+}
+
+/* ASIDE */
+.cont {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+}
+
+.aside1 {
+  color: navy;
+  padding: 1.2rem;
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: aside;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.aside1 .txt {
+  color: white;
+}
+
+.img1 {
+  max-width: 70%;
+  height: auto;
+  border-radius: 5px;
+}
+
+/*MAIN*/
+.main1 {
+  padding: 1.2rem;
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: main;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-left: 5rem;
+}
+
+.main1 > h2 {
+  padding: 1.2rem;
+  color: white;
+}
+
+.main1 > p {
+  color: white;
+}
+
+.galeria-main {
+  background: #000104;
+  background: -webkit-gradient(linear, left top, right top, color-stop(29%, #000104), to(#1a3a73));
+  background: linear-gradient(90deg, #000104 29%, #1a3a73 100%);
+  margin: 10%;
+  border-radius: 5%;
+  height: 50rem;
+}
+
+.galeria-main > p {
+  margin: 20%;
+  color: white;
+  padding: 2rem;
+}
+
+.galeria-main .sites {
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: 300ms ease-in-out;
+  transition: 300ms ease-in-out;
+  font-weight: bold;
+}
+
+.sites:hover {
+  background-color: #0e2055;
+}
+
+.logos1 a {
+  background-color: gray;
+  height: 40px;
+  width: 40px;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: black;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.faden {
+  visibility: hidden;
+}
+
+@-webkit-keyframes f-in {
+  from {
+    visibility: hidden;
+    opacity: 0;
+  }
+  1% {
+    visibility: visible;
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@keyframes f-in {
+  from {
+    visibility: hidden;
+    opacity: 0;
+  }
+  1% {
+    visibility: visible;
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.f-in {
+  -webkit-animation: f-in 200ms ease-in-out  forwards;
+          animation: f-in 200ms ease-in-out  forwards;
+}
+
+@-webkit-keyframes f-out {
+  from {
+    visibility: visible;
+    opacity: 1;
+  }
+  99% {
+    visibility: visible;
+    opacity: 0;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes f-out {
+  from {
+    visibility: visible;
+    opacity: 1;
+  }
+  99% {
+    visibility: visible;
+    opacity: 0;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.f-out {
+  -webkit-animation: f-out 200ms ease-in-out  forwards;
+          animation: f-out 200ms ease-in-out  forwards;
+}
+/*# sourceMappingURL=style.css.map */

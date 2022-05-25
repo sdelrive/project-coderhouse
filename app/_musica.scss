@@ -1,0 +1,50 @@
+
+
+.galeria-main{
+    background: rgb(0,1,4);
+    background: linear-gradient(90deg, rgba(0,1,4,1) 29%, rgba(26,58,115,1) 100%);    margin: 10%;
+    border-radius: 5%;
+
+   >p{
+    margin: 20%;
+    color: white;
+    padding: 2rem;
+ 
+   } 
+
+ 
+   .sites {
+       color: white;
+       display: flex;
+       justify-content: space-around;
+       align-items: center;
+       transition: 300ms ease-in-out;
+        font-weight: bold;
+   }
+   height: 50rem;
+   
+}
+
+.sites:hover{
+    background-color: rgb(14, 32, 85);
+    
+}
+
+
+
+
+.logos1 a{
+
+    background-color:gray;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: black;
+    transition: 0.2s;
+    
+}
+
+
+

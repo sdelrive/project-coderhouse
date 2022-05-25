@@ -1,0 +1,120 @@
+
+.header{
+    background-color: black;
+    width: 100%;
+    nav{
+        padding: 0px 20px 0px 20px;
+    }
+
+    
+    &.open{   //menu abiero para moviles
+
+        .overlay{
+            display: block;
+            animation: f-in 300ms ease-in-out  forwards;
+        }
+        .header__menu{
+            >span:first-child{
+                transform: rotate(45deg);
+    
+            }
+            >span:nth-child(2){
+                opacity: 0;
+                
+            }
+            >span:last-child{
+                transform: rotate(-45deg);
+            }
+        }
+
+    }
+        
+    
+    .overlay{
+        //opacity: 0;        
+        position: absolute;
+        top: 70px;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;
+        background-image: linear-gradient(slategray , transparent);
+        animation: f-out 300ms ease-in-out  forwards;
+
+    }
+
+    
+
+    &__menu{   //menu movil 
+
+        > span{
+            display: block;
+            width: 26px;
+            height: 2px;
+            background-color: white;
+            transition: all 300ms ease-in-out;
+            transform-origin: 2px 1px;
+            &:not(:last-child){
+            margin-bottom: 6px;
+            }
+            
+        }
+
+       
+    }
+    &__menu2{     
+        margin: 10px 1.5rem;
+        padding: 1.625rem;
+        border-radius: 5px;
+        position: absolute;
+        width: 90%;        //menu movil abierto
+       >a{
+        color: white;
+        display: block;
+        text-align: center;
+        padding: 0.625rem;
+        transition: 200ms ease-in-out;
+
+       } 
+       >a:hover{
+           color: #54E8C7;
+       }
+       background: black;
+
+    }
+
+    &__logo{
+        color:white;
+        font-size: 1rem;
+
+        transition: 200ms ease-in-out;
+        &:hover{
+            color: #54E8C7;
+
+        }
+    }
+
+    &__nav{
+        li{
+            list-style-type: none;
+             display: inline-block;
+        }
+         a{
+            display: flex;
+            color: white;
+            padding: 7px 5px;
+            font-size: .9rem;;
+            font-weight: 500;
+            margin-right: 20px;
+            transition: 200ms ease-in-out;
+
+            &:hover{
+                color: #54E8C7;
+
+            }
+         }
+        
+    }
+    margin-bottom: -20px;
+
+   
+}
