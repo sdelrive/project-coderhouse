@@ -61,7 +61,7 @@ a {
   .body {
     width: 100%;
     height: 800px;
-    background-image: url(https://es.rollingstone.com/wp-content/uploads/2022/01/Amigos-de-Mac-Miller-celebran-lo-que-seria-su-cumpleanos-numero-30-con-mensajesc.jpg);
+    background-image: url(/img/fondo2.jpg);
     margin: 0px;
     padding: 0px;
     background-attachment: fixed;
