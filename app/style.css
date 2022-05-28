@@ -17,10 +17,14 @@ body {
   line-height: 1.3;
   width: 100%;
   height: 800px;
-  background-image: url(../img/fondo1.jpg);
+  /*background-image: url(../img/fondo1.jpg);*/
+  background: black;
+  background: -webkit-gradient(linear, left top, right top, from(black), to(#0c2044));
+  background: linear-gradient(90deg, black 0%, #0c2044 100%);
   margin: 0px;
   padding: 0px;
   background-attachment: fixed;
+  height: auto;
 }
 
 body.no-scroll {
@@ -60,8 +64,8 @@ a {
   }
   .body {
     width: 100%;
-    height: 800px;
-    background-image: url(../img/fondo2.jpg);
+    height: 100%;
+    background-image: url(../img/fondo1.jpg);
     margin: 0px;
     padding: 0px;
     background-attachment: fixed;
@@ -187,9 +191,10 @@ a {
 }
 
 .footer {
-  height: 15rem;
+  height: auto;
   background-color: black;
   width: 100%;
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -357,22 +362,34 @@ a {
   color: white;
 }
 
-.galeria-main {
-  background: #000104;
-  background: -webkit-gradient(linear, left top, right top, color-stop(29%, #000104), to(#1a3a73));
-  background: linear-gradient(90deg, #000104 29%, #1a3a73 100%);
-  margin: 10%;
-  border-radius: 5%;
-  height: 50rem;
+.bg-image {
+  background-image: url(../img/galeria_fondo.jpg);
+  background-size: cover;
 }
 
-.galeria-main > p {
-  margin: 20%;
+.galeria_main {
+  background-color: whitesmoke;
+  margin: 10%;
+  display: block;
+  width: 320px;
+  height: auto;
+  margin: auto;
+  margin-bottom: 30px;
+  margin-top: 5rem;
+}
+
+.galeria_main p {
+  text-align: center;
   color: white;
   padding: 2rem;
+  font-weight: bold;
+  background-color: transparent;
+  margin-bottom: 0rem;
+  margin-top: -10px;
+  background-color: #0e1111;
 }
 
-.galeria-main .sites {
+.galeria_main .sites {
   color: white;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -385,10 +402,16 @@ a {
   -webkit-transition: 300ms ease-in-out;
   transition: 300ms ease-in-out;
   font-weight: bold;
+  height: 5rem;
 }
 
 .sites:hover {
-  background-color: #0e2055;
+  background-color: #e6e6e6;
+}
+
+.sites:hover .sheet_btn {
+  color: white;
+  background: black;
 }
 
 .logos1 a {
@@ -401,6 +424,37 @@ a {
   color: black;
   -webkit-transition: 0.2s;
   transition: 0.2s;
+}
+
+.adjust_pic {
+  max-width: 100%;
+  max-height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.sheet_btn {
+  border: 1px solid transparent;
+  margin-right: 5rem;
+  background: #d5d2d2;
+  background: linear-gradient(3deg, #d5d2d2 0%, white 100%);
+  color: gray;
+  padding: 10px 27px;
+  text-align: center;
+  border-radius: 5%;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  -webkit-transition: 500ms ease-in-out;
+  transition: 500ms ease-in-out;
+}
+
+.border {
+  border-bottom: 0.0001ch;
+  border-color: #a7a5a5;
+  border-bottom-style: inset;
 }
 
 .faden {
