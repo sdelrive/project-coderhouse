@@ -1,14 +1,18 @@
 
 /* LAYOUT */ 
 
+.bg-image-index{
+background-image: url(../img/splash.jpg);
+}
 .layout{
     width: 100%;
     display: grid;
     margin:0;
     grid-template-columns: 30% 70%;
-    grid-template-rows: auto auto auto;
+    grid-template-rows: auto auto auto auto;
     grid-template-areas: 
     "header header"
+    "cara cara"
     "main aside"
     "footer footer"
     ;
@@ -54,7 +58,7 @@
     flex-direction: column;
 
     .txt{
-        color: white;
+        color: black;
     }
 
 }
@@ -77,11 +81,11 @@
     
     > h2{
         padding: 1.2rem;
-        color: white;
+        color: black;
     }
 
     >   p{
-        color: white;
+        color: black;
     }
     
 }

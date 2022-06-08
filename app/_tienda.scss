@@ -1,0 +1,219 @@
+
+
+.layout-store{  
+    width: 100%;
+    display: grid;
+    //margin: 0vh 10px 0 10px;
+    grid-template-columns: 10% 20% 20% 20% 10%;
+    grid-template-rows: auto auto auto auto
+    auto;
+    grid-template-areas: 
+    "header header header header header header"
+    "aside art1 art2 art3 art4 asidee"
+    "aside art5 art6 art7 art8 asidee"
+    "aside art9 art10 art11 art12 asidee"
+    "footer footer footer footer footer footer";
+
+    
+    &_header{
+        grid-area: header;
+    }
+
+    &_footer{
+        grid-area:footer;
+    }
+
+}
+
+.art{
+    margin-top: 200px;
+    width: 100%;
+    background: black;
+    margin: 20px;
+    height: auto;
+    width: 200px;
+    border-radius: 5%;
+    padding: 10px;
+    box-shadow: 5px 1px 30px 1px #888888;
+    .chart{
+        margin: 5px;
+    }
+    
+
+    &_button{
+        background: black;
+        border-radius: 5%;
+        margin-left: 10%;
+        margin-right: 10%;     
+        transition: 200ms ease-in-out;
+        
+        p{
+            color: white;
+            padding: 5px;
+        }
+        &:hover{
+        margin-left: 5%;
+        margin-right: 5%; 
+        background-color: aquamarine;
+        
+        p{
+            padding: 15px;
+            color: black;
+        }
+        }
+
+
+    }
+    
+    &1 {
+        grid-area: art1;
+        color: black;
+        background: white;
+        text-align: center;
+        border-color: black;
+        border-radius: 10px;
+
+    }
+    &2{
+        grid-area: art2;
+        color: black;
+        background: white;
+        text-align: center;
+        border-color: black;
+        border-radius: 10px;
+
+    }
+    &3{
+        grid-area: art3;
+        color: black;
+        background: white;
+        text-align: center;
+        border-color: black;
+        border-radius: 10px;
+
+    }
+    &4{
+        grid-area: art4;
+        color: black;
+        background: white;
+        text-align: center;
+        border-color: black;
+        border-radius: 10px;
+
+    }
+    &5{
+        grid-area: art5;
+        color: black;
+        background: white;
+        text-align: center;
+        border-color: black;
+        border-radius: 10px;
+
+    }
+    &6{
+        grid-area: art6;
+        color: black;
+        background: white;
+        text-align: center;
+        border-color: black;
+        border-radius: 10px;
+
+    }
+    &7{
+        grid-area: art7;
+        color: black;
+        background: white;
+        text-align: center;
+        border-color: black;
+        border-radius: 10px;
+
+    }
+    &8{
+        grid-area: art8;
+        color: black;
+        background: white;
+        text-align: center;
+        border-color: black;
+        border-radius: 10px;
+
+    }
+    &9{
+        grid-area: art9;
+        color: black;
+        background: white;
+        text-align: center;
+        border-color: black;
+        border-radius: 10px;
+
+    }
+    &10{
+        grid-area: art10;
+        color: black;
+        background: white;
+        text-align: center;
+        border-color: black;
+        border-radius: 10px;
+
+    }
+    &11{
+        grid-area: art11;
+        color: black;
+        background: white;
+        text-align: center;
+        border-color: black;
+        border-radius: 10px;
+
+    }
+    &12{
+        grid-area: art12;
+        color: black;
+        background: white;
+        text-align: center;
+        border-color: black;
+        border-radius: 10px;
+
+    }
+
+    
+    &_img{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:1100px){
+    .layout-store{
+        grid-template-columns: 10% 40% 40% 10%;
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "header header header header"
+        "side art1 art2 aside"
+        "side art3 art4 aside"
+        "side art5 art6 aside"
+        "side art7 art8 aside"
+        "side art9 art10 aside"
+        "side art11 art12 aside"
+        "footer footer footer footer "
+    }
+}
+
+@media screen and (max-width:550px){
+    .layout-store{
+        grid-template-columns: 20% 60% 20%;
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "header header header"
+        "side art1  aside"
+        "side art2  aside"
+        "side art3  aside"
+        "side art4  aside"
+        "side art5  aside"
+        "side art6  aside"
+        "side art7  aside"
+        "side art8  aside"
+        "side art9  aside"
+        "side art10  aside"
+        "side art11 aside"
+        "side art12  aside"
+        "footer footer footer "
+    }
+}

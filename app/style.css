@@ -30,6 +30,11 @@ body {
   background-attachment: fixed;
 }
 
+body_store {
+  background-image: url(../img/macmiller_sheet.jpg);
+  background-size: cover;
+}
+
 body.no-scroll {
   overflow: hidden;
 }
@@ -44,6 +49,17 @@ body.no-scroll {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.flex-jc-sa {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.flex-jc-c {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .flex-ai-c {
@@ -81,9 +97,14 @@ a {
   }
 }
 
+.fw-bold {
+  font-weight: bold;
+}
+
 .header {
   background-color: black;
   width: 100%;
+  height: 70px;
   margin-bottom: -20px;
 }
 
@@ -258,6 +279,10 @@ a {
 }
 
 /* LAYOUT */
+.bg-image-index {
+  background-image: url(../img/splash.jpg);
+}
+
 .layout {
   width: 100%;
   display: -ms-grid;
@@ -265,28 +290,29 @@ a {
   margin: 0;
   -ms-grid-columns: 30% 70%;
       grid-template-columns: 30% 70%;
-  -ms-grid-rows: auto auto auto;
-      grid-template-rows: auto auto auto;
-      grid-template-areas: "header header" "main aside" "footer footer";
+  -ms-grid-rows: auto auto auto auto;
+      grid-template-rows: auto auto auto auto;
+      grid-template-areas: "header header" "cara cara" "main aside" "footer footer";
 }
 
 .header-layout {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
+  -ms-grid-column-span: 6;
   grid-area: header;
 }
 
 .aside-layout {
   -ms-grid-row: 2;
-  -ms-grid-column: 2;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 1;
   grid-area: aside;
 }
 
 .footer-layout {
-  -ms-grid-row: 3;
+  -ms-grid-row: 5;
   -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
+  -ms-grid-column-span: 6;
   grid-area: footer;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -294,7 +320,7 @@ a {
 }
 
 .main-layout {
-  -ms-grid-row: 2;
+  -ms-grid-row: 3;
   -ms-grid-column: 1;
   grid-area: main;
 }
@@ -320,7 +346,8 @@ a {
   color: navy;
   padding: 1.2rem;
   -ms-grid-row: 2;
-  -ms-grid-column: 2;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 1;
   grid-area: aside;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -332,7 +359,7 @@ a {
 }
 
 .aside1 .txt {
-  color: white;
+  color: black;
 }
 
 .img1 {
@@ -344,7 +371,7 @@ a {
 /*MAIN*/
 .main1 {
   padding: 1.2rem;
-  -ms-grid-row: 2;
+  -ms-grid-row: 3;
   -ms-grid-column: 1;
   grid-area: main;
   display: -webkit-box;
@@ -359,11 +386,11 @@ a {
 
 .main1 > h2 {
   padding: 1.2rem;
-  color: white;
+  color: black;
 }
 
 .main1 > p {
-  color: white;
+  color: black;
 }
 
 .bg-image {
@@ -459,6 +486,229 @@ a {
   border-bottom: 0.0001ch;
   border-color: #a7a5a5;
   border-bottom-style: inset;
+}
+
+.layout-store {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 10% 20% 20% 20% 10%;
+      grid-template-columns: 10% 20% 20% 20% 10%;
+  -ms-grid-rows: auto auto auto auto auto;
+      grid-template-rows: auto auto auto auto auto;
+      grid-template-areas: "header header header header header header" "aside art1 art2 art3 art4 asidee" "aside art5 art6 art7 art8 asidee" "aside art9 art10 art11 art12 asidee" "footer footer footer footer footer footer";
+}
+
+.layout-store_header {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 6;
+  grid-area: header;
+}
+
+.layout-store_footer {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 6;
+  grid-area: footer;
+}
+
+.art {
+  margin-top: 200px;
+  width: 100%;
+  background: black;
+  margin: 20px;
+  height: auto;
+  width: 200px;
+  border-radius: 5%;
+  padding: 10px;
+  -webkit-box-shadow: 5px 1px 30px 1px #888888;
+          box-shadow: 5px 1px 30px 1px #888888;
+}
+
+.art .chart {
+  margin: 5px;
+}
+
+.art_button {
+  background: black;
+  border-radius: 5%;
+  margin-left: 10%;
+  margin-right: 10%;
+  -webkit-transition: 200ms ease-in-out;
+  transition: 200ms ease-in-out;
+}
+
+.art_button p {
+  color: white;
+  padding: 5px;
+}
+
+.art_button:hover {
+  margin-left: 5%;
+  margin-right: 5%;
+  background-color: aquamarine;
+}
+
+.art_button:hover p {
+  padding: 15px;
+  color: black;
+}
+
+.art1 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: art1;
+  color: black;
+  background: white;
+  text-align: center;
+  border-color: black;
+  border-radius: 10px;
+}
+
+.art2 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  grid-area: art2;
+  color: black;
+  background: white;
+  text-align: center;
+  border-color: black;
+  border-radius: 10px;
+}
+
+.art3 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 4;
+  grid-area: art3;
+  color: black;
+  background: white;
+  text-align: center;
+  border-color: black;
+  border-radius: 10px;
+}
+
+.art4 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 5;
+  grid-area: art4;
+  color: black;
+  background: white;
+  text-align: center;
+  border-color: black;
+  border-radius: 10px;
+}
+
+.art5 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: art5;
+  color: black;
+  background: white;
+  text-align: center;
+  border-color: black;
+  border-radius: 10px;
+}
+
+.art6 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+  grid-area: art6;
+  color: black;
+  background: white;
+  text-align: center;
+  border-color: black;
+  border-radius: 10px;
+}
+
+.art7 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 4;
+  grid-area: art7;
+  color: black;
+  background: white;
+  text-align: center;
+  border-color: black;
+  border-radius: 10px;
+}
+
+.art8 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 5;
+  grid-area: art8;
+  color: black;
+  background: white;
+  text-align: center;
+  border-color: black;
+  border-radius: 10px;
+}
+
+.art9 {
+  -ms-grid-row: 4;
+  -ms-grid-column: 2;
+  grid-area: art9;
+  color: black;
+  background: white;
+  text-align: center;
+  border-color: black;
+  border-radius: 10px;
+}
+
+.art10 {
+  -ms-grid-row: 4;
+  -ms-grid-column: 3;
+  grid-area: art10;
+  color: black;
+  background: white;
+  text-align: center;
+  border-color: black;
+  border-radius: 10px;
+}
+
+.art11 {
+  -ms-grid-row: 4;
+  -ms-grid-column: 4;
+  grid-area: art11;
+  color: black;
+  background: white;
+  text-align: center;
+  border-color: black;
+  border-radius: 10px;
+}
+
+.art12 {
+  -ms-grid-row: 4;
+  -ms-grid-column: 5;
+  grid-area: art12;
+  color: black;
+  background: white;
+  text-align: center;
+  border-color: black;
+  border-radius: 10px;
+}
+
+.art_img {
+  width: 100%;
+}
+
+@media screen and (max-width: 1100px) {
+  .layout-store {
+    -ms-grid-columns: 10% 40% 40% 10%;
+        grid-template-columns: 10% 40% 40% 10%;
+    -ms-grid-rows: auto;
+        grid-template-rows: auto;
+        grid-template-areas: "header header header header" "side art1 art2 aside" "side art3 art4 aside" "side art5 art6 aside" "side art7 art8 aside" "side art9 art10 aside" "side art11 art12 aside" "footer footer footer footer ";
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .layout-store {
+    -ms-grid-columns: 20% 60% 20%;
+        grid-template-columns: 20% 60% 20%;
+    -ms-grid-rows: auto;
+        grid-template-rows: auto;
+        grid-template-areas: "header header header" "side art1  aside" "side art2  aside" "side art3  aside" "side art4  aside" "side art5  aside" "side art6  aside" "side art7  aside" "side art8  aside" "side art9  aside" "side art10  aside" "side art11 aside" "side art12  aside" "footer footer footer ";
+  }
 }
 
 .faden {

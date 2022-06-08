@@ -23,6 +23,11 @@ body{
     padding: 0;
     background-attachment: fixed;
 
+    &_store{
+        background-image: url(../img/macmiller_sheet.jpg);
+        background-size: cover;
+    }
+
     &.no-scroll{
         overflow: hidden;
     }
@@ -36,7 +41,12 @@ body{
     &-jc-sb{
         justify-content: space-between;
     }
-
+    &-jc-sa{
+        justify-content: space-around;
+    }
+    &-jc-c{
+        justify-content: center;
+    }
     &-ai-c{
         align-items: center;
     }
@@ -74,4 +84,10 @@ a{
         display:none;
     
     }
+ }
+
+
+ // TEXT
+ .fw-bold{
+     font-weight: bold;
  }
