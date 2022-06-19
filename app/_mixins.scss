@@ -1,0 +1,13 @@
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin cards-style {
+    color: black;
+    background: white;
+    text-align: center;
+    border-color: black;
+    border-radius: 10px;
+}

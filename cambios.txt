@@ -1,0 +1,10 @@
+TODO ESTO PARA INDEX, STORE Y MUSICA. GALERIA AUN NO AGREGADA.
+
+
+mixins: creado en scss "variables", agregado a cada tarjeta de la tienda en el scss llamado "tienda"
+
+mapa: creado en scss "variables" usado en scss "general" en la clase "body"
+
+extend: creado en css "general" clase .hover-nav, usado en el scss  _header en los hovers del nav
+
+agregado meta con keywords y description

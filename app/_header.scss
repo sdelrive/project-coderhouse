@@ -77,8 +77,8 @@
 
        } 
        >a:hover{
-           color: #54E8C7;
-       }
+        @extend .hover-nav;
+    }
        background: black;
 
     }
@@ -86,10 +86,9 @@
     &__logo{
         color:white;
         font-size: 1rem;
-
         transition: 200ms ease-in-out;
         &:hover{
-            color: #54E8C7;
+            @extend .hover-nav;
 
         }
     }
@@ -109,7 +108,7 @@
             transition: 200ms ease-in-out;
 
             &:hover{
-                color: #54E8C7;
+                @extend .hover-nav;
 
             }
          }

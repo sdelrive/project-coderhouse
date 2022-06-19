@@ -67,110 +67,73 @@
     
     &1 {
         grid-area: art1;
-        color: black;
-        background: white;
-        text-align: center;
-        border-color: black;
-        border-radius: 10px;
+        @include cards-style;
 
     }
     &2{
         grid-area: art2;
-        color: black;
-        background: white;
-        text-align: center;
-        border-color: black;
-        border-radius: 10px;
+        @include cards-style;
+
 
     }
     &3{
         grid-area: art3;
-        color: black;
-        background: white;
-        text-align: center;
-        border-color: black;
-        border-radius: 10px;
+        @include cards-style;
+
 
     }
     &4{
         grid-area: art4;
-        color: black;
-        background: white;
-        text-align: center;
-        border-color: black;
-        border-radius: 10px;
+        @include cards-style;
+
 
     }
     &5{
         grid-area: art5;
-        color: black;
-        background: white;
-        text-align: center;
-        border-color: black;
-        border-radius: 10px;
+        @include cards-style;
+
 
     }
     &6{
         grid-area: art6;
-        color: black;
-        background: white;
-        text-align: center;
-        border-color: black;
-        border-radius: 10px;
+        @include cards-style;
+
 
     }
     &7{
         grid-area: art7;
-        color: black;
-        background: white;
-        text-align: center;
-        border-color: black;
-        border-radius: 10px;
+        @include cards-style;
+
 
     }
     &8{
         grid-area: art8;
-        color: black;
-        background: white;
-        text-align: center;
-        border-color: black;
-        border-radius: 10px;
+        @include cards-style;
+
 
     }
     &9{
         grid-area: art9;
-        color: black;
-        background: white;
-        text-align: center;
-        border-color: black;
-        border-radius: 10px;
+        @include cards-style;
+
 
     }
     &10{
         grid-area: art10;
-        color: black;
-        background: white;
-        text-align: center;
-        border-color: black;
-        border-radius: 10px;
+        @include cards-style;
+
 
     }
     &11{
         grid-area: art11;
-        color: black;
-        background: white;
-        text-align: center;
-        border-color: black;
-        border-radius: 10px;
+        @include cards-style;
+
 
     }
     &12{
         grid-area: art12;
-        color: black;
-        background: white;
-        text-align: center;
-        border-color: black;
-        border-radius: 10px;
+        @include cards-style;
+
 
     }
 

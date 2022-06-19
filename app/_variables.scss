@@ -1,0 +1,17 @@
+$fondo: whitesmoke;
+
+$font-s: 1.125rem;
+
+$line-h: 1.3;
+
+$an:  f-out 300ms ease-in-out  forwards;
+
+$font: (
+    'font-size': $font-s,
+    'line-height': $line-h,
+);
+
+$transitions: (
+    'animation': $an
+
+);
