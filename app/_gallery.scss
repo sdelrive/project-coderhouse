@@ -1,0 +1,178 @@
+.body-gallery{
+    background-image: url(../img/gallery.jpg);
+    background-size: cover;
+
+}
+
+.gallery{
+    color: black;
+    display: grid;
+    &-layout{
+        grid-template-rows: 10% 50% 30% 10%;
+        grid-template-areas: 
+        "header"
+        "intro"
+        "carousel"
+        "footer";
+    }
+
+    &__nav{
+        li{
+            list-style-type: none;
+             display: inline-block;
+        }
+         a{
+            display: flex;
+            color: black;
+            padding: 7px 5px;
+            font-size: 1.4rem;;
+            font-weight: 800;
+            margin-right: 20px;
+            transition: 200ms ease-in-out;
+
+            &:hover{
+                @extend .hover-nav;
+                font-size: 1.6rem;
+
+            }
+         }
+        
+    }
+
+    &__logo{
+        color: black;
+        font-size: 1.4rem;
+        margin-left: 15px;
+        &:hover{
+            font-size: 1.6rem;
+
+        }
+    }
+    
+}
+
+
+.intro{
+    height: auto;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-areas: 
+    "left right"
+    "left2 right2"
+    "left3 right3"
+    "whole whole"
+    "left4 right4"
+    "left5 right5"
+    "left6 right6";
+    &-layout{
+        grid-area: intro;
+    }
+   
+    
+    &__1{ //ESTO TIENE EL PROBLEMA EN MOBILE
+        // margin-top: 500px;
+        grid-area: right;
+
+        margin: 200px 10% 10rem 10%;
+//         
+        img{
+            width: 80%;
+            transition: 200ms ease-in-out;
+
+            &:hover{
+                width: 100%;
+            }
+        }
+    }
+
+    &__2{ //ESTO TIENE EL PROBLEMA EN MOBILE
+        // margin-top: 500px;
+        grid-area: left2;
+
+        margin: 50px 0% 10rem 10%;
+//         
+        img{
+            width: 80%;
+            transition: 200ms ease-in-out;
+
+            &:hover{
+                width: 100%;
+            }
+        }
+    }
+
+    &__3{ //ESTO TIENE EL PROBLEMA EN MOBILE
+        // margin-top: 500px;
+        grid-area: right3;
+
+        margin: 50px 0% 10rem 10%;
+//         
+        img{
+            width: 80%;
+            transition: 200ms ease-in-out;
+
+            &:hover{
+                width: 100%;
+            }
+        }
+    }
+
+    &__4{ //ESTO TIENE EL PROBLEMA EN MOBILE
+        // margin-top: 500px;
+        grid-area: whole;
+
+//         
+        img{
+            width: 100%;
+        }
+    }
+    
+    &__5{ //ESTO TIENE EL PROBLEMA EN MOBILE
+        // margin-top: 500px;
+        grid-area: left4;
+
+        margin: 50px auto 10rem auto;
+//         
+        img{
+            width: 100%;
+        }
+    }
+    &__6{ //ESTO TIENE EL PROBLEMA EN MOBILE
+        // margin-top: 500px;
+        grid-area: right5;
+
+        margin: 200px 10% 10rem 10%;
+//         
+        img{
+            width: 100%;
+        }
+    }
+    &__7{ //ESTO TIENE EL PROBLEMA EN MOBILE
+        // margin-top: 500px;
+        grid-area: left6;
+
+        margin: 50px 0% 10rem 30%;
+//         
+        img{
+            width: 100%;
+        }
+    }
+}
+
+
+
+@media screen and (max-width:700px){
+    .intro{
+        // grid-template-columns: 1fr;
+        // grid-template-rows: auto 2fr auto auto;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-areas: 
+        "left"
+        "right"
+        "left2"
+        "right3"
+        "left4"
+        "right5";
+    }
+}

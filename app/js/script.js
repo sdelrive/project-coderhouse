@@ -1,3 +1,5 @@
+// defino las clases y ID a utilizar como constantes.
+
 const menu_btn = document.querySelector('#menu_btn');
 const header = document.querySelector('.header');
 const overlay = document.querySelector('.overlay');

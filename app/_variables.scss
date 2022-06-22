@@ -1,17 +1,24 @@
 $fondo: whitesmoke;
+$graier: slategray;
 
 $font-s: 1.125rem;
-
 $line-h: 1.3;
+$font-f:'Bai Jamjuree', sans-serif;
 
-$an:  f-out 300ms ease-in-out  forwards;
+$an-out:  f-out 300ms ease-in-out  forwards;
 
 $font: (
     'font-size': $font-s,
     'line-height': $line-h,
+    'font-family': $font-f,
+);
+
+$color: (
+    'wsmoke': $fondo,
+    'ogray': $graier,
 );
 
 $transitions: (
-    'animation': $an
+    'an-out': $an-out
 
 );

@@ -10,9 +10,9 @@ html{
 
 body{
     display: flex;
-    min-height: 100vh;  /* esto hace que el body tenga   etamaño minimo la totalidad del viewport*/
+    min-height: 100vh;  /* esto hace que el body tenga   tamaño minimo la totalidad del viewport*/
     padding: 0;
-    font-family: 'Bai Jamjuree', sans-serif;
+    font-family: map-get($font,font-family);
     font-size: map-get($font,font-size);
     line-height: map-get($font,line-height);
     width: 100%;
@@ -56,11 +56,11 @@ a{
     text-decoration: none;
 }
 
-.contain{
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+// .contain{
+//     // padding-left: 1.5rem;
+//     // padding-right: 1.5rem;
 
-}
+// }
 
 
 // Visibilidad

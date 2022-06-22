@@ -15,9 +15,9 @@ body {
   display: -ms-flexbox;
   display: flex;
   min-height: 100vh;
-  /* esto hace que el body tenga   etamaño minimo la totalidad del viewport*/
+  /* esto hace que el body tenga   tamaño minimo la totalidad del viewport*/
   padding: 0;
-  font-family: 'Bai Jamjuree', sans-serif;
+  font-family: "Bai Jamjuree", sans-serif;
   font-size: 1.125rem;
   line-height: 1.3;
   width: 100%;
@@ -70,11 +70,6 @@ a {
   text-decoration: none;
 }
 
-.contain {
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-}
-
 @media screen and (max-width: 599px) {
   .hide-for-mobile {
     display: none;
@@ -107,7 +102,7 @@ a {
   font-weight: bold;
 }
 
-.hover-nav, .header__menu2 > a:hover, .header__logo:hover, .header__nav a:hover {
+.hover-nav, .header__menu2 > a:hover, .header__logo:hover, .header__nav a:hover, .gallery__nav a:hover {
   color: #54E8C7;
 }
 
@@ -150,8 +145,6 @@ a {
   left: 0px;
   background-image: -webkit-gradient(linear, left top, left bottom, from(slategray), to(transparent));
   background-image: linear-gradient(slategray, transparent);
-  -webkit-animation: f-out 300ms ease-in-out  forwards;
-          animation: f-out 300ms ease-in-out  forwards;
 }
 
 .header__menu > span {
@@ -183,6 +176,8 @@ a {
   display: block;
   text-align: center;
   padding: 0.625rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
   -webkit-transition: 200ms ease-in-out;
   transition: 200ms ease-in-out;
 }
@@ -389,6 +384,175 @@ a {
 
 .main1 > p {
   color: black;
+}
+
+.body-gallery {
+  background-image: url(../img/gallery.jpg);
+  background-size: cover;
+}
+
+.gallery {
+  color: black;
+  display: -ms-grid;
+  display: grid;
+}
+
+.gallery-layout {
+  -ms-grid-rows: 10% 50% 30% 10%;
+      grid-template-rows: 10% 50% 30% 10%;
+      grid-template-areas: "header" "intro" "carousel" "footer";
+}
+
+.gallery__nav li {
+  list-style-type: none;
+  display: inline-block;
+}
+
+.gallery__nav a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: black;
+  padding: 7px 5px;
+  font-size: 1.4rem;
+  font-weight: 800;
+  margin-right: 20px;
+  -webkit-transition: 200ms ease-in-out;
+  transition: 200ms ease-in-out;
+}
+
+.gallery__nav a:hover {
+  font-size: 1.6rem;
+}
+
+.gallery__logo {
+  color: black;
+  font-size: 1.4rem;
+  margin-left: 15px;
+}
+
+.gallery__logo:hover {
+  font-size: 1.6rem;
+}
+
+.intro {
+  height: auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 50% 50%;
+      grid-template-columns: 50% 50%;
+      grid-template-areas: "left right" "left2 right2" "left3 right3" "whole whole" "left4 right4" "left5 right5" "left6 right6";
+}
+
+.intro-layout {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: intro;
+}
+
+.intro__1 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: right;
+  margin: 200px 10% 10rem 10%;
+}
+
+.intro__1 img {
+  width: 80%;
+  -webkit-transition: 200ms ease-in-out;
+  transition: 200ms ease-in-out;
+}
+
+.intro__1 img:hover {
+  width: 100%;
+}
+
+.intro__2 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: left2;
+  margin: 50px 0% 10rem 10%;
+}
+
+.intro__2 img {
+  width: 80%;
+  -webkit-transition: 200ms ease-in-out;
+  transition: 200ms ease-in-out;
+}
+
+.intro__2 img:hover {
+  width: 100%;
+}
+
+.intro__3 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: right3;
+  margin: 50px 0% 10rem 10%;
+}
+
+.intro__3 img {
+  width: 80%;
+  -webkit-transition: 200ms ease-in-out;
+  transition: 200ms ease-in-out;
+}
+
+.intro__3 img:hover {
+  width: 100%;
+}
+
+.intro__4 {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: whole;
+}
+
+.intro__4 img {
+  width: 100%;
+}
+
+.intro__5 {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  grid-area: left4;
+  margin: 50px auto 10rem auto;
+}
+
+.intro__5 img {
+  width: 100%;
+}
+
+.intro__6 {
+  -ms-grid-row: 6;
+  -ms-grid-column: 2;
+  grid-area: right5;
+  margin: 200px 10% 10rem 10%;
+}
+
+.intro__6 img {
+  width: 100%;
+}
+
+.intro__7 {
+  -ms-grid-row: 7;
+  -ms-grid-column: 1;
+  grid-area: left6;
+  margin: 50px 0% 10rem 30%;
+}
+
+.intro__7 img {
+  width: 100%;
+}
+
+@media screen and (max-width: 700px) {
+  .intro {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+        grid-template-areas: "left" "right" "left2" "right3" "left4" "right5";
+  }
 }
 
 .bg-image {

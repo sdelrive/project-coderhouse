@@ -38,8 +38,7 @@
         right: 0px;
         bottom: 0px;
         left: 0px;
-        background-image: linear-gradient(slategray , transparent);
-        animation: f-out 300ms ease-in-out  forwards;
+        background-image: linear-gradient($graier , transparent);
 
     }
 
@@ -62,6 +61,8 @@
 
        
     }
+
+
     &__menu2{     
         margin: 10px 1.5rem;
         padding: 1.625rem;
@@ -73,6 +74,8 @@
         display: block;
         text-align: center;
         padding: 0.625rem;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
         transition: 200ms ease-in-out;
 
        } 
