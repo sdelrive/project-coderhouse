@@ -1,48 +1,204 @@
 /* LAYOUT */ 
-
 .bg-image-index{
     background-image: url(../img/splash.jpg);
     }
 
-.layout{
-        width: 100%;
+    .body-gallery{
+        background-image: url(../img/gallery.jpg);
+        background-size: cover;
+    
+    }
+    
+    .gallery{
+        color: black;
         display: grid;
-        margin:0;
-        grid-template-columns: 30% 70%;
-        grid-template-rows: auto auto auto auto;
-        grid-template-areas: 
-        "header header"
-        "cara cara"
-        "main aside"
-        "footer footer"
-        ;
-    }
-    
-    .header-layout{
-        grid-area: header;
-    }
-    .aside-layout{
-        grid-area: aside;
-    }
-    .footer-layout{
-        grid-area: footer;
-        display: flex;
-    }
-    .main-layout{
-        grid-area: main;
-    }
-    
-    @media screen and (max-width:700px){
-        .layout{
-            grid-template-columns: 1fr;
-            grid-template-rows: auto 2fr auto auto;
+        &-layout{
+            grid-template-rows: 10% 50% 30% 10%;
             grid-template-areas: 
-            "header "
-            "main"
-            "aside"
-            "footer"
+            "header"
+            "intro"
+            "carousel"
+            "footer";
+        }
+    
+        &__nav{
+            li{
+                list-style-type: none;
+                 display: inline-block;
+            }
+             a{
+                display: flex;
+                color: black;
+                padding: 7px 5px;
+                font-size: 1.4rem;;
+                font-weight: 800;
+                margin-right: 20px;
+                transition: 200ms ease-in-out;
+    
+                &:hover{
+                    @extend .hover-nav;
+                    font-size: 1.6rem;
+    
+                }
+             }
+            
+        }
+    
+        &__logo{
+            color: black;
+            font-size: 1.4rem;
+            margin-left: 15px;
+            &:hover{
+                font-size: 1.6rem;
+    
+            }
+        }
+        
+    }
+    
+    
+// .layout{
+//         width: 100%;
+//         display: grid;
+//         margin:0;
+//         grid-template-columns: 30% 70%;
+//         grid-template-rows: auto auto auto auto;
+//         grid-template-areas: 
+//         "header header"
+//         "cara cara"
+//         "main aside"
+//         "footer footer"
+//         ;
+//     }
+    
+    // .header-layout{
+    //     grid-area: header;
+    // }
+    // .aside-layout{
+    //     grid-area: aside;
+    // }
+    // .footer-layout{
+    //     grid-area: footer;
+    //     display: flex;
+    // }
+    // .main-layout{
+    //     grid-area: main;
+    // }
+    
+
+    
+.intro{
+    height: 1900px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-areas: 
+    "yea yea"
+    "left2 left2"
+    "im im"
+    "text text"
+    ;
+    &-layout{
+        grid-area: intro;
+    }
+   
+
+    &__1{ //ESTO TIENE EL PROBLEMA EN MOBILE
+        // margin-top: 500px;
+        grid-area: im;
+        margin: 0 10%  0 10%;
+        display: flex;
+        justify-content: center;
+        img{
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            transition: 200ms ease-in-out;
+
+            &:hover{
+                width: 100%;
+            }
         }
     }
+
+    
+
+    &__2{ //ESTO TIENE EL PROBLEMA EN MOBILE
+        // margin-top: 500px;
+        display: flex;
+        grid-area: left2;
+         margin: 50px 10% 10rem 10%;
+        justify-content: center;
+        p{
+            color: #0e5369;
+            // text-shadow: 2px 0 0 black, -2px 0 0 black, 0 2px 0 black, 0 -2px 0 black, 1px 1px black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black;
+            font-size: 600%;
+        }
+    }
+
+    &__3{
+        margin: 150px 30% auto 30%;
+        display: flex;
+        grid-area: text;
+        background-color: rgba(31, 30, 30, 0.541);
+        font-size: large;
+        padding: 10px;
+        color: white;
+        height: auto;
+    }
+
+}
+
+
+
+@media screen and (max-width:700px){
+    .intro{
+        // grid-template-columns: 1fr;
+        // grid-template-rows: auto 2fr auto auto;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-areas: 
+        "yea"
+        "left2"
+        "text"
+        ;
+
+       
+        &__2{
+            p{
+                font-size: 400%;
+            }
+            
+        }
+
+        &__3{
+            margin: 0px 10% auto 10%;
+            display: flex;
+            grid-area: text;
+            background-color: rgba(31, 30, 30, 0.541);
+            font-size: large;
+            padding: 10px;
+            color: white;
+            height: auto;
+        }
+
+      
+    
+    }
+
+    
+}
+    // @media screen and (max-width:700px){
+    //     .layout{
+    //         grid-template-columns: 1fr;
+    //         grid-template-rows: auto 2fr auto auto;
+    //         grid-template-areas: 
+    //         "header "
+    //         "main"
+    //         "aside"
+    //         "footer"
+    //     }
+    // }
+    
     /* ASIDE */ 
     .cont{
         position: relative;
@@ -89,4 +245,5 @@
         }
         
     }
+    
     
